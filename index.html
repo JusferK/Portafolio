@@ -4,26 +4,40 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cv</title>
-        <link rel="stylesheet" href="/ProyectosP/Cv/css/stylesheet.css">
+        <link rel="stylesheet" href="./css/stylesheet.css">
     </head>
     <body onload="welcomeF(), ThnksForComing()">
-
         <header>
-
-
-            <div class="profileImg">
-                <img src="/ProyectosP/Cv/sources/fotoPerfil.jfif" alt="foto de perfil" width="325" height="450">
-            </div>
-
-            <div class="title">
                 <h1>Justine Fernando Arriaga Marroquin</h1>
-            </div>
-
         </header>
-
+        
         <nav> 
+            <div>
+                <ul class="breadcrumb">
+                    <li><a href="">About me</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Job experience</a></li>
+                    <li><a href="">Education</a></li>
+                    <li><a href="">Hobbies</a></li>
+                    <li><a href="">Proyects</a></li>
+                    <li><a href="">Certification</a></li>
+                    <li><a href="">About me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="description" id="AM">
+                <h2>About me</h2>
+                <p>Hello, my name is Justine, a developer junior from Guatemala. I'm currently studying System engineering, at the moment of me doing this, I'm cursing my third semester.</p>
+                <p>Starting 2023, I started to learn Javascript, html and css, and from now I believe I've made a lot and learning a lot, but programming is a non-stop learning</p>
+                <p>Currently I'm not only I'm learning Javascript, Css & Html but I'm also learning how to be a Full stack engineer at <a href="https://www.codecademy.com/catalog" target="_blank" >CodeCademy</a></p>
+                <p>I consider my self someone humble, always ready to learn and be teached, happy and passionated for coding/problem solving. I now that I just started this journey and I don't know everything</p>
+                <p>but not knowing will not stop me, but instead, motivate me to learn and always to look for the answer. Thanks to my discipline, I can finish what I start.</p>
+            </div>
+        
             <div class="skills">
-                <ul class="languages">
+                <ul class="languages" id="SK">
                     <h2>Skills</h2>
                     <h4>Programming</h4>
                     <li>Html</li>
@@ -45,85 +59,52 @@
                 </ul>
             </div>
 
-            <div class="description">
-                <h2>About me</h2>
-                <p>Hello, my name is Justine, a developer junior from Guatemala. I'm currently studying System engineering, at the moment of me doing this, I'm cursing my second semester.</p>
-                <p>Starting 2023, I started to learn Javascript, html and css, and from now I believe I've made a lot and learning a lot, but programming is a non-stop learning</p>
-                <p>Currently I'm not only I'm learning Javascript, Css & Html but I'm also learning how to be a Full stack engineer at <a href="https://www.codecademy.com/catalog" target="_blank" >CodeCademy</a></p>
-                <p>Also, I started to study for a fundation promoting a schoolarship for a certification from <a href="https://holberton.anahuac.mx/gt/" target="_blank">Holberton</a> School Guatemala</p>
-                <p>I consider my self someone humble, always ready to learn and be teached, happy and passionated for coding/problem solving. I now that I just started this journey and I don't know everything</p>
-                <p>but not knowing will not stop me, but instead, motivate me to learn and always to look for the answer. Thanks to my discipline, I can finish what I start.</p>
-            </div>
-        </nav>
-
-
-        <div class="JobExpSec">
-            <div class="JobExperience">
+            <div class="JobExpSec" id="JE">
                 <h2>Job Experience</h2>
                 <ul>
                     <h3>Customer Service</h3>
                     <li>Alorica | Decemeber, 2019 - August 2021 | Customer Service Representative</li>
                     <li>Everise | Septemer, 2021 - May, 2023 | Customer Service Representative</li>
                 </ul>
-
                 <ul>
                     <h3>Developer / Programming</h3>
                     <li> KingDom Code Guatemala |september, 2023  - currently | Programmer Analyst jr.</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="education">
+            <div class="education" id="ED">
+                <h2>Education</h2>
 
-            <h2>Education</h2>
+                <h4>School</h4>
+                <p>Bilingual School La Pradera | 2019 | Science & letters</p>
 
-            <h4>School</h4>
-            <p>Bilingual School La Pradera | 2019 | Science & letters</p>
+                <h4>College</h4>
+                <p>College Mariano Galvez de Guatemala | 2023 - currently | System Engineering</p>
 
-            <h4>College</h4>
-            <p>College Mariano Galvez de Guatemala | 2023 - currently | System Engineering</p>
+                <h4>Extracurricular</h4>
+                <p>European Academy | february, 2023 - Octuber 2023 | JavaScript</p>
+                <p>CodeCademy | August, 2023 - Currently | FullStack</p>
+            </div>
 
-            <h4>Extracurricular</h4>
-            <p>European Academy | february, 2023 - Octuber 2023 | JavaScript</p>
-            <p>CodeCademy | August, 2023 - Currently | FullStack</p>
-            
-        </div>
-
-        <div class="activites">
-            <div class="hobbies">
+            <div class="activites" id="HO">
                 <h2>Hobbies</h2>
                 <p>I love watching UFC, since when I was a teenager, I used to practice MMA. Now, I prefer to spend my free time, doing homework from college or learning as much as I can from Holberton school / Codecademy</p>
                 <p>When I can, I go to the gym, lift some weight trying to recover my old shape, or least trying to stay healthy since now my life is based of being sit looking at the computer</p>
                 <p>Here's some picture from the stuff I do as a hobbie (also old stuff)</p>
-
-                <div class="pictures">
-
-                </div>
-
             </div>
-        </div>
 
-        <div class="proyects">
-            <h2>Proyects</h2>
-
-            <div class="librarypage">
+            <div class="proyects">
+                <h2>Proyects</h2>
                 <h3>Library</h3>
                 <h5>Description</h5>
                 <p>This proyect was made by me as final proyect for the course "Introduction to computer systems", and I needed to do a web page that could have a banner, navegation section and a footer. It's important to mention that it was my first ever proyect made.</p>
-
                 <ol>
                     <h3>Technology used</h3>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JAVASCRIPT</li>
                 </ol>
-
-                <a href="https://lalibreriaraldetupreferencia.on.drv.tw/proyectofinal/Index.html" target="_blank"><img src="/ProyectosP/Cv/sources/mainpage.jpg" alt="proyect 1 page 1"></a>
-                <a href="https://lalibreriaraldetupreferencia.on.drv.tw/proyectofinal/paginaht.html" target="_blank"><img src="/ProyectosP/Cv/sources/mainpage2.png" alt="proyect 1 page 2"></a>
-                <a href="https://lalibreriaraldetupreferencia.on.drv.tw/proyectofinal/paginahtm.html" target="_blank"><img src="/ProyectosP/Cv/sources/mainpage3.png" alt="proyect 1 page 3"></a>
-
                 <p class="instructions">Click on images to ridirect to web page</p>
-
             </div>
 
             <div class="calculator">
@@ -141,23 +122,16 @@
                 <a href="" target="_blank">Here the link is!</a>
                 <img src="" alt="Cientific calculator">
             </div>
-        </div>
 
-        <div class="certifications">
-            <img src="/ProyectosP/Cv/sources/Screenshot 2023-10-06 104212.png" alt="certification" width="500px">
-        </div>
+            <div class="certifications">
+                <img src="./sources/Screenshot 2023-10-06 104212.png" alt="certification" width="500px">
+            </div>
+        </main>
 
         <footer>
             <h3>Social Media</h3>
-
-            <a href="https://github.com/JusferK" target="_blank"><img src="/ProyectosP/Cv/sources/githublogo.jfif" alt="Github logo"></a>
-            <a href="https://www.instagram.com/fernando_arriaga19/" target="_blank"><img src="/ProyectosP/Cv/sources/027712250a632b2e6f63c5466b792494.jpg" alt="Instagram logo"></a>
-            <a id="mailY"><img src="/ProyectosP/Cv/sources/maillogo.jfif" alt="mail"></a>
-            <a href=""></a> <!--Linkeding profile link-->
-
-
         </footer>
 
-        <script src="/ProyectosP/Cv/js/script.js"></script>
+        <!--<script src="/ProyectosP/Cv/js/script.js"></script>-->
     </body>
 </html>
