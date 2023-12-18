@@ -1,18 +1,37 @@
-var mailCopy = document.getElementById("mailY");
+const breadcrumbListedItem = ['ABM', 'SKI', 'JOE', 'EDU', 'HOB', 'PRO', 'CER'];
+const domSections = ['AM', 'SK', 'JE', 'ED', 'HO', 'PR', 'CT'];
+const listedItems = [];
+const sections = []
 
-function welcomeF(){
-    alert("Welcome! this is my portafolio!");
+breadcrumbListedItem.forEach(button => {
+    listedItems.push(document.getElementById(button));
+});
+
+domSections.forEach(dSection => {
+    sections.push(document.getElementById(dSection));
+});
+
+const defaultSettings = () => {
+    sections[0].hidden = false;
+    for(let i = 1; i < listedItems.length; i++) {
+        sections[i].hidden = true;
+    }
 }
 
-const CopyClip = async () => {
-    await navigator.clipboard.writeText("justinearriagam@gmail.com");
-    alert("Email has been copy on your clipboard!");
-
+const currentShowing = () => {
+    if(sections[0].hidden === true) {
+        console.log(sections[0]);
+    }
 }
 
-const ThnksForComing = () => {
-    console.log("What do you think about my portafolio? Please fill this survey so that way I can improve in future proyects! ");
-}
+currentShowing();
+
+// let showingRightNow = currentShowing();
 
 
-mailCopy.addEventListener('click', CopyClip);
+
+/* listedItems[1].addEventListener('click', function() {
+    console.log(showingRightNow);
+    showingRightNow.hidden = true;
+    sections[1].hidden = false;
+}); */

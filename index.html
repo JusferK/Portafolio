@@ -6,7 +6,7 @@
         <title>cv</title>
         <link rel="stylesheet" href="./css/stylesheet.css">
     </head>
-    <body onload="welcomeF(), ThnksForComing()">
+    <body onload="defaultSettings();">
         <header>
                 <h1>Justine Fernando Arriaga Marroquin</h1>
         </header>
@@ -14,14 +14,13 @@
         <nav> 
             <div>
                 <ul class="breadcrumb">
-                    <li><a href="">About me</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Job experience</a></li>
-                    <li><a href="">Education</a></li>
-                    <li><a href="">Hobbies</a></li>
-                    <li><a href="">Proyects</a></li>
-                    <li><a href="">Certification</a></li>
-                    <li><a href="">About me</a></li>
+                    <li id="ABM"><a href="#description">About me</a></li>
+                    <li id="SKI"><a href="#skills">Skills</a></li>
+                    <li id="JOE"><a href="#JobExpSec">Job experience</a></li>
+                    <li id="EDU"><a href="#education">Education</a></li>
+                    <li id="HOB"><a href="#Hobbies">Hobbies</a></li>
+                    <li id="PRO"><a href="#proyects">Proyects</a></li>
+                    <li id="CER"><a href="#certifications">Certification</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,8 +35,8 @@
                 <p>but not knowing will not stop me, but instead, motivate me to learn and always to look for the answer. Thanks to my discipline, I can finish what I start.</p>
             </div>
         
-            <div class="skills">
-                <ul class="languages" id="SK">
+            <div class="skills" id="SK">
+                <ul class="languages">
                     <h2>Skills</h2>
                     <h4>Programming</h4>
                     <li>Html</li>
@@ -86,14 +85,14 @@
                 <p>CodeCademy | August, 2023 - Currently | FullStack</p>
             </div>
 
-            <div class="activites" id="HO">
+            <div class="Hobbies" id="HO">
                 <h2>Hobbies</h2>
                 <p>I love watching UFC, since when I was a teenager, I used to practice MMA. Now, I prefer to spend my free time, doing homework from college or learning as much as I can from Holberton school / Codecademy</p>
                 <p>When I can, I go to the gym, lift some weight trying to recover my old shape, or least trying to stay healthy since now my life is based of being sit looking at the computer</p>
                 <p>Here's some picture from the stuff I do as a hobbie (also old stuff)</p>
             </div>
 
-            <div class="proyects">
+            <div class="proyects" id="PR">
                 <h2>Proyects</h2>
                 <h3>Library</h3>
                 <h5>Description</h5>
@@ -104,10 +103,6 @@
                     <li>CSS</li>
                     <li>JAVASCRIPT</li>
                 </ol>
-                <p class="instructions">Click on images to ridirect to web page</p>
-            </div>
-
-            <div class="calculator">
                 <h3>Calculator</h3>
                 <h5>Description</h5>
                 <p>This proyect was made by me. On the code, I tried not to use the math functions that Javascript has already, but instead, code the proccess of doing calculations such as square root, cos, equations, etc...</p>
@@ -123,15 +118,14 @@
                 <img src="" alt="Cientific calculator">
             </div>
 
-            <div class="certifications">
+            <div class="certifications" id="CT">
+                <h2>Certifications</h2>
                 <img src="./sources/Screenshot 2023-10-06 104212.png" alt="certification" width="500px">
             </div>
         </main>
 
-        <footer>
-            <h3>Social Media</h3>
-        </footer>
+        <!--<footer><h3>Social Media</h3></footer>-->
 
-        <!--<script src="/ProyectosP/Cv/js/script.js"></script>-->
+        <script src="./js/script.js"></script>
     </body>
 </html>
