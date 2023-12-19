@@ -24,7 +24,7 @@ const currentShowing = () => {
     }
 }
 
-currentShowing();
+
 
 // let showingRightNow = currentShowing();
 
