@@ -16,15 +16,17 @@ const defaultSettings = () => {
     for(let i = 1; i < listedItems.length; i++) {
         sections[i].hidden = true;
     }
-}
+};
 
 const currentShowing = () => {
     if(sections[0].hidden === true) {
         console.log(sections[0]);
     }
+};
+
+for(let i = 0; i < 10; i++) {
+    console.log(i);
 }
-
-
 
 // let showingRightNow = currentShowing();
 
