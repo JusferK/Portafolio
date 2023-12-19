@@ -12,27 +12,31 @@ domSections.forEach(dSection => {
 });
 
 const defaultSettings = () => {
-    sections[0].hidden = false;
+    sections[0].style.display = 'block';
     for(let i = 1; i < listedItems.length; i++) {
-        sections[i].hidden = true;
+        sections[i].style.display = 'none';
     }
 };
 
 const currentShowing = () => {
-    if(sections[0].hidden === true) {
-        console.log(sections[0]);
-    }
-};
-
-for(let i = 0; i < 10; i++) {
-    console.log(i);
+    let showingRN;
+    sections.forEach(element => {
+        if(window.getComputedStyle(element).display === 'block') {
+            showingRN = element;
+        }
+    })
+    return showingRN;
 }
 
-// let showingRightNow = currentShowing();
-
-
-/* listedItems[1].addEventListener('click', function() {
-    console.log(showingRightNow);
-    showingRightNow.hidden = true;
-    sections[1].hidden = false;
-}); */
+for(let a = 0; a < listedItems.length; a++) {
+    listedItems[a].addEventListener('click', function() {
+        let displayingRN = currentShowing();
+        let indexholder = sections.indexOf(displayingRN);
+         if(indexholder === a) {
+            alert('you are viewing the current sections...');
+        } else {
+            sections[a].style.display = 'block';
+            displayingRN.style.display = 'none'
+        }
+    });
+}
