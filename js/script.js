@@ -24,10 +24,9 @@ const currentShowing = () => {
     }
 }
 
-currentShowing();
+
 
 // let showingRightNow = currentShowing();
-
 
 
 /* listedItems[1].addEventListener('click', function() {
