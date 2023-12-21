@@ -1,7 +1,7 @@
 const breadcrumbListedItem = ['ABM', 'SKI', 'JOE', 'EDU', 'HOB', 'PRO', 'CER'];
 const domSections = ['AM', 'SK', 'JE', 'ED', 'HO', 'PR', 'CT'];
 const listedItems = [];
-const sections = []
+const sections = [];
 
 breadcrumbListedItem.forEach(button => {
     listedItems.push(document.getElementById(button));
@@ -24,19 +24,19 @@ const currentShowing = () => {
         if(window.getComputedStyle(element).display === 'block') {
             showingRN = element;
         }
-    })
+    });
     return showingRN;
 }
 
 for(let a = 0; a < listedItems.length; a++) {
     listedItems[a].addEventListener('click', function() {
         let displayingRN = currentShowing();
-        let indexholder = sections.indexOf(displayingRN);
-         if(indexholder === a) {
-            alert('you are viewing the current sections...');
+        let index = sections.indexOf(displayingRN);
+         if(index === a) {
+            alert('you are viewing the current section...');
         } else {
             sections[a].style.display = 'block';
-            displayingRN.style.display = 'none'
+            displayingRN.style.display = 'none';
         }
     });
 }
