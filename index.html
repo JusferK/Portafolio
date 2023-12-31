@@ -24,15 +24,6 @@
             <img src="./sources/Me.png" alt="Justine Arriaga" width="450px" height="500px">
         </nav>
         <main>
-            <div class="squares">
-                <div class="currentS" id="item-1"></div>
-                <div class="currentS" id="item-2"></div>
-                <div class="currentS" id="item-3"></div>
-                <div class="currentS" id="item-4"></div>
-                <div class="currentS" id="item-5"></div>
-                <div class="currentS" id="item-6"></div>
-                <div class="currentS" id="item-7"></div>
-            </div>
             <div class="description" id="AM">
                 <div class="sub-container1">
                     <h2>Everything About me</h2>
@@ -63,49 +54,90 @@
                             <img src="./sources/frontend.png" alt="front-end">
                         </div>
                         <div class="back-end" id="two">
-                            <h1>just testing 1</h1>
+                            <h3>Programming | Back-end</h3>
+                            <img src="./sources/mysql.png" alt="mysql" id="mysql" style="width: 350px;">
+                            <img src="./sources/java.png" alt="java" id="java" style="width: 250px;">
                         </div>
                         <div class="other" id="three">
-                            <h1>just testing 2</h1>
+                            <h3>Other programs</h3>
+                            <h4 id="title-1">Video editing | Filmora</h4>
+                            <img src="./sources/video.png" alt="video editing" width="300px" height="300px" class="videoimg">
+                            <h4 id="title-2">Photo editing | Adobe Photoshop</h4>
+                            <img src="./sources/photoshop.png" alt="photo editing" width="500px" height="300px" class="photoimg">
                         </div>
                         <div class="languages" id="four">
-                            <h1>just testing 3</h1>
+                            <h3>Languages</h3>
+                            <h4 id="language-1">Spanish</h4>
+                            <img src="./sources/spanish.png" alt="spanish" width="225px" height="190px" id="flag-1">
+                            <h4 id="language-2">English</h4>
+                            <img src="./sources/english.png" alt="english" width="225px" height="190px" id="flag-2">
+                            <h4 id="language-3">Russian</h4>
+                            <img src="./sources/russian.png" alt="russian" width="225px" height="190px" id="flag-3">
                         </div>
                     </div>
                     <img src="./sources/arrowR.png" alt="arrow" class="arrowRight" id="toRight">
                     <img src="./sources/arrowL.png" alt="arrow" class="arrowLeft" id="toLeft"> 
+                    <span id="slideIn" class="slideIndicator"></span>
                 </div>
             </div>
             <div class="JobExpSec" id="JE">
-                <h2>Job Experience</h2>
-                <ul>
-                    <h3>Customer Service</h3>
-                    <li>Alorica | Decemeber, 2019 - August 2021 | Customer Service Representative</li>
-                    <li>Everise | September, 2022 - May, 2023 | Customer Service Representative</li>
-                </ul>
-                <ul>
-                    <h3>Developer / Programming</h3>
-                    <li> KingDom Code Guatemala |september, 2023 - september, 2023 | Programmer Analyst jr.</li>
-                </ul>
+                <div class="container">
+                    <h2>Job Experience</h2>
+                    <div id="CSR">
+                        <h3>Customer Service</h3>
+                        <p class="info-1">Alorica - T-mobile | Customer Service Representative | december 2019 - august 2021</p>
+                        <img src="./sources/tmobile.png" alt="T-mobile" class="tmobile">
+                        <p class="info-2">Everise - Humana | Customer Service Representative | septemeber 2022 - may 2023</p>
+                        <img src="./sources/Humana.png" alt="humana" height="100px" width="400px" class="humana">
+                    </div>
+                    <div id="DEV">
+                        <h3>Software Engineer</h3>
+                        <p>Kingdom Code | Software Analyst jr. | september 2023 - september 2023</p>
+                        <img src="./sources/kingdom.png" alt="KNDcode">
+                    </div>
+                    <img src="./sources/arrowR.png" alt="arrow" class="arrowRight" id="toRight-2">
+                    <img src="./sources/arrowL.png" alt="arrow" class="arrowLeft" id="toLeft-2">
+                    <span id="pageIndicator"></span>
+                </div>
             </div>
             <div class="education" id="ED">
-                <h2>Education</h2>
-
-                <h4>School</h4>
-                <p>Bilingual School La Pradera | 2018 - 2019 | Science & letters</p>
-
-                <h4>College</h4>
-                <p>College Mariano Galvez de Guatemala | 2023 - currently | System Engineering</p>
-
-                <h4>Extracurricular</h4>
-                <p>European Academy | february, 2023 - Octuber 2023 | JavaScript</p>
-                <p>CodeCademy | August, 2023 - Currently | FullStack</p>
+                <div class="sub-container-2">
+                    <h2>Education</h2>
+                    <div class="college" id="section-1">
+                        <h3>College</h3>
+                        <p>College Mariano Galvez de Guatemala | 2023 - currently | System Engineering</p>
+                        <img src="./sources/umg.png" alt="umg" width="180px" height="150px">
+                    </div>
+                    <div class="extracurricular" id="section-2">
+                        <h3>Extracurricular</h3>
+                        <p class="eucademy">European Academy | february, 2023 - Octuber 2023 | JavaScript</p>
+                        <img src="./sources/academiaeu.png" alt="umg" width="180px" height="150px" class="eulogo">
+                        <p class="codeca">CodeCademy | August, 2023 - Currently | FullStack</p>
+                        <img src="./sources/codecademyLog.png" alt="codecademy" width="200px" height="50px" class="codelogo">
+                    </div>
+                </div>
             </div>
             <div class="Hobbies" id="HO">
-                <h2>Hobbies</h2>
-                <p>I love watching UFC, since when I was a teenager, I used to practice MMA. Now, I prefer to spend my free time, doing homework from college or learning as much as I can from Codecademy</p>
-                <p>When I can, I go to the gym, lift some weight trying to recover my old shape, or least trying to stay healthy since now my life is based of being sit looking at the computer</p>
-                <p>Here's some picture from the stuff I do as a hobbie (also old stuff)</p>
+                <div class="main-container">
+                    <h2>Hobbies</h2>
+                    <div class="text">
+                        <p>
+                            On my free time, I rather study everything about programming, but when having a break, I enjoy watching
+                            sciencie or the universe topics like documentary or read about it. Early mornings I go for a run so 
+                            I can relief stress from the studies/work, I enjoy watching UFC whenever there is an event. And the most
+                            important thing, I practice my religion every moment, I try to be the best version of me always having 
+                            on mind about my religion. I love spending my time with my girlfriend Chrysta and having a great time 
+                            together which I think is the most important on my life, but having God as first and most important
+                            on my life
+                        </p>
+                    </div>
+                    <div class="images">
+                        <img src="./sources/chrysta.png" alt="couple">
+                        <img src="./sources/atenea.png" alt="cat">
+                        <img src="./sources/code.png" alt="code">
+                        <img src="./sources/cross.PNG" alt="cross">
+                    </div>
+                </div>
             </div>
             <div class="proyects" id="PR">
                 <h2>Proyects</h2>

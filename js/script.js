@@ -1,13 +1,17 @@
 const breadcrumbListedItem = ['ABM', 'SKI', 'JOE', 'EDU', 'HOB', 'PRO', 'CER'];
 const domSections = ['AM', 'SK', 'JE', 'ED', 'HO', 'PR', 'CT'];
-const squares = ['item-1', 'item-2', 'item-3', 'item-4', 'item-5', 'item-6', 'item-7'];
 const bothSides = ['toLeft', 'toRight'];
+const bothSides_2 = ['toLeft-2', 'toRight-2'];
 const presentation = ['one', 'two', 'three', 'four'];
+const jobsSection = ['CSR', 'DEV'];
 const listedItems = [];
 const sections = [];
-const inSection = [];
 const leftAndRight = [];
+const leftAndRight_2 = []
 const slides = [];
+const jobs = [];
+const slideIndicator = document.getElementById('slideIn');
+const pageIndicatorS = document.getElementById('pageIndicator');
 
 breadcrumbListedItem.forEach(button => {
     listedItems.push(document.getElementById(button));
@@ -15,10 +19,6 @@ breadcrumbListedItem.forEach(button => {
 
 domSections.forEach(dSection => {
     sections.push(document.getElementById(dSection));
-});
-
-squares.forEach(square => {
-    inSection.push(document.getElementById(square));
 });
 
 bothSides.forEach(side => {
@@ -29,10 +29,23 @@ presentation.forEach(slide => {
     slides.push(document.getElementById(slide));
 });
 
+jobsSection.forEach(job => {
+    jobs.push(document.getElementById(job));
+});
+
+bothSides_2.forEach(side => {
+    leftAndRight_2.push(document.getElementById(side));
+});
+
 const defaultSettings = () => {
+
     sections[0].style.display = 'block';
-    inSection[0].style.backgroundColor = 'rgb(0, 0, 0)';
     listedItems[0].style.color = 'white';
+    slideIndicator.innerHTML = `${1} / 4`;
+    jobs[0].style.display = 'grid';
+    jobs[1].style.display = 'none'
+    pageIndicatorS.innerHTML = `${1} / 2`;
+
     for(let i = 1; i < listedItems.length; i++) {
         sections[i].style.display = 'none';
     }
@@ -62,20 +75,20 @@ const listedItemActive = () => {
     return activeRN;
 }
 
-const currentInSection = () => {
-    let turnOn;
-    inSection.forEach(square => {
-        if(window.getComputedStyle(square).backgroundColor === 'rgb(0, 0, 0)') {
-            turnOn = square;
-        }
-    });
-    return turnOn;
-};
-
 const currentSlide = () => {
     let slideRN; 
     slides.forEach(slide => {
-        if(window.getComputedStyle(slide).display === 'grid' || window.getComputedStyle(slide).display === 'flex') {
+        if(window.getComputedStyle(slide).display === 'grid') {
+            slideRN = slide;
+        }
+    });
+    return slideRN;
+}
+
+const currentJobSection = () => {
+    let slideRN;
+    jobs.forEach(slide => {
+        if(window.getComputedStyle(slide).display === 'grid') {
             slideRN = slide;
         }
     });
@@ -85,7 +98,6 @@ const currentSlide = () => {
 for(let a = 0; a < listedItems.length; a++) {
     listedItems[a].addEventListener('click', function() {
         let displayingRN = currentShowing();
-        let turnRN = currentInSection();
         let itemTurned = listedItemActive();
         let index = sections.indexOf(displayingRN);
          if(index === a) {
@@ -93,44 +105,8 @@ for(let a = 0; a < listedItems.length; a++) {
         } else {
             sections[a].style.display = 'block';
             displayingRN.style.display = 'none';
-            inSection[a].style.backgroundColor = 'rgb(0, 0, 0)';
-            turnRN.style.backgroundColor = 'white';
             listedItems[a].style.color = 'white';
-            itemTurned.style.color = 'rgb(0, 0, 0)';
-        }
-    });
-}
-
-inSection.forEach(square => {
-    square.addEventListener('mouseover', function() {
-        square.style.width = '20px';
-        square.style.height = '20px';
-        square.style.transition = 'ease-in .2s';
-        square.style.cursor = 'pointer';
-    });
-
-    square.addEventListener('mouseout', function() {
-        square.style.width = '10px';
-        square.style.height = '10px';
-        square.style.transition = 'ease-out .2s';
-    })
-});
-
-for(let z = 0; z < inSection.length; z++) {
-    inSection[z].addEventListener('click', function() {
-        let displayingRN = currentShowing();
-        let turnRN = currentInSection();
-        let turnIndex = inSection.indexOf(turnRN);
-        let itemTurned = listedItemActive();
-        if(turnIndex === z) {
-            alert('you are viewing the current section...');
-        } else {
-            inSection[z].style.backgroundColor = 'rgb(0, 0, 0)';
-            turnRN.style.backgroundColor = 'white';
-            sections[z].style.display = 'block';
-            displayingRN.style.display = 'none';
-            listedItems[z].style.color = 'white';
-            itemTurned.style.color = 'rgb(0, 0, 0)';
+            itemTurned.style.color = 'rgb(128, 128, 128)';
         }
     });
 }
@@ -151,16 +127,44 @@ for(let u = 0; u < leftAndRight.length; u++) {
         let slideActive = currentSlide();
         let slideIndex = slides.indexOf(slideActive);
 
-        if(slideIndex === 4) {
-            console.log(slideIndex)
-        } else if(u === 0) {
+        if(u === 0 && slideIndex > 0) {
             slides[slideIndex - 1].style.display = 'grid';
             slideActive.style.display = 'none';
-        } else if(u === 1 && slideIndex < 4) {
+            slideIndicator.innerHTML = `${(slideIndex + 1) - 1} / 4`;
+        } else if(u === 1 && slideIndex < 3) {
             slides[slideIndex + 1].style.display = 'grid';
             slideActive.style.display = 'none';
+            slideIndicator.innerHTML = `${(slideIndex + 1) + 1} / 4`;
         }
-    })
+    });
+}
+
+for(let e = 0; e < leftAndRight_2.length; e++) {
+    leftAndRight_2[e].addEventListener('mouseover', function() {
+        leftAndRight_2[e].style.opacity = '1';
+        leftAndRight_2[e].style.border = '1px solid rgba(0, 0, 0, 1)';
+        leftAndRight_2[e].style.cursor = 'pointer';
+    });
+
+    leftAndRight_2[e].addEventListener('mouseout', function() {
+        leftAndRight_2[e].style.opacity = '0.1';;
+        leftAndRight_2[e].style.border = '1px solid rgba(0, 0, 0, 0.1)';
+    });
+
+    leftAndRight_2[e].addEventListener('click', function() {
+        let slideActive = currentJobSection();
+        let slideIndex = jobs.indexOf(slideActive);
+
+        if(e === 0 && slideIndex > 0) {
+            jobs[slideIndex - 1].style.display = 'grid';
+            slideActive.style.display = 'none';
+            pageIndicatorS.innerHTML = `${(slideIndex + 1) - 1} / 2`;
+        } else if(e === 1 && slideIndex < 1) {
+            jobs[slideIndex + 1].style.display = 'grid';
+            slideActive.style.display = 'none';
+            pageIndicatorS.innerHTML = `${(slideIndex + 1) + 1} / 2`;
+        }
+    });
 }
 
 document.body.onload = defaultSettings;
