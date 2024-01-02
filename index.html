@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cv</title>
         <link rel="stylesheet" href="./css/stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&family=Poppins:wght@800&family=Rubik:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -18,7 +24,7 @@
                     <li><a id="CER" href="#certifications">Certification</a></li>
                 </ul>
         </header>
-        <nav> 
+        <nav class="top"> 
             <h1>Justine Fernando Arriaga Marroquin</h1>
             <p>I'm a Software Engineer</p>
             <img src="./sources/Me.png" alt="Justine Arriaga" width="450px" height="500px">
@@ -140,38 +146,100 @@
                 </div>
             </div>
             <div class="proyects" id="PR">
-                <h2>Proyects</h2>
-                <h3>Library</h3>
-                <h5>Description</h5>
-                <p>This proyect was made by me as final proyect for the course "Introduction to computer systems", and I needed to do a web page that could have a banner, navegation section and a footer. It's important to mention that it was my first ever proyect made.</p>
-                <ol>
-                    <h3>Technology used</h3>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                </ol>
-                <h3>Calculator</h3>
-                <h5>Description</h5>
-                <p>This proyect was made by me. On the code, I tried not to use the math functions that Javascript already has, but instead, code the proccess of doing calculations such as square root, cos, equations, etc...</p>
-                <p>This was probably one the best proyects so far I've made since it allow me to explore multiple way to code one thing.</p>
-                <h4>Bibliography</h4>
-                <p>For this proyect I used the following link in order to solve & guide my self to build the code: </p>
-                <ul>
-                    <li>This link guide me to build the code for the square root by using newton-raphson-method: <a target="_blank" href="https://brilliant.org/wiki/newton-raphson-method/">https://brilliant.org/wiki/newton-raphson-method/</a></li>
-                    <li>This link help me build the code for cube root functions by using Halley's Method: </li>
-                </ul>
-
-                <a href="" target="_blank">Here the link is!</a>
-                <img src="" alt="Cientific calculator">
+                <div class="box">
+                    <h2>Proyects</h2>
+                    <div id="sub-box">
+                        <h3>Library</h3>
+                        <p>
+                            This was my first ever proyect made, and it was a requirement as partof one of my college courses, "introduction to 
+                            computer systems" and was finally able to realize how hard a proyect can be.
+                        </p>
+                        <img src="./sources/mainpage.png" alt="main page">
+                        <ul>
+                            <h4>Technologies used</h4>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div id="sub-box-2">
+                        <h3>Calculator</h3>
+                        <p>
+                            Even though is unfinished, this proyect can be found on my <a href="https://github.com/JusferK/Calculator" target="_blank">github</a> so 
+                            you can check the progress. But just to let you know, making this proyect will try to instead of using all the methods that js has
+                            integrated, I'm going to solve it without using them. 
+                        </p>
+                        <img src="./sources/calculator.png" alt="calculator">
+                        <ul>
+                            <h4>Technologies used</h4>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div id="sub-box-3">
+                        <h3>Photography club</h3>
+                        <p>
+                            This website was part as a proyect challenge from <a href="https://www.codecademy.com/learn">codecademy</a> and honestly
+                            the reason why I'm including this page in this sections is because I think is one the best web page I've ever design
+                            found the good using of the display mode grid.
+                        </p>
+                        <img src="./sources/clubwebsite.png" alt="Photography club">
+                        <ul>
+                            <h4>Technologies used</h4>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div id="sub-box-4">
+                        <h3>This portafolio</h3>
+                        <p>
+                            Even though is part of one of the portafolio proyect, the purpose of this proyect is to show the front-end skills
+                            and be able to show all the proyects I've done so far as a software engineer.
+                        </p>
+                        <img src="./sources/portafolio.png" alt="Photography club">
+                        <ul>
+                            <h4>Technologies used</h4>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <img src="./sources/arrowR.png" alt="arrow" class="arrowRight" id="toRight-3">
+					<img src="./sources/arrowL.png" alt="arrow" class="arrowLeft" id="toLeft-3">
+					<span id="proyectIndicator"></span>
+                </div>
             </div>
             <div class="certifications" id="CT">
-                <h2>Certifications</h2>
-                <h3>European Academy</h3>
-                <img src="./sources/Screenshot 2023-10-06 104212.png" alt="certification" width="500px">
+                <div class="box-2">
+                    <h2>Certifications</h2>
+                    <div class="EuropeanAcademy-certification" id="certification-1">
+                        <h3>European Academy</h3>
+                        <img src="./sources/Screenshot 2023-10-06 104212.png" alt="eucademy certification" width="500px">
+                    </div>
+                    <div class="Codecademy-certification" id="certification-2">
+                        <h3>Codecademy</h3>
+                        <img src="./sources/codecademyCertification.png" alt="codecademy certification">
+                    </div>
+                    <img src="./sources/arrowR.png" alt="arrow" class="arrowRight" id="toRight-4">
+					<img src="./sources/arrowL.png" alt="arrow" class="arrowLeft" id="toLeft-4">
+					<span id="certificationIndicator"></span>
+                </div>
             </div>
         </main>
         <footer>
-            <h3>Social Media</h3>
+            <div class="container-footer">
+                <h3>Social Media</h3>
+                <a href="https://github.com/JusferK" target="_blank"><img src="./sources/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/justine-arriaga-a4794715b/" target="_blank"><img src="./sources/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/fernando_arriaga19/" target="_blank"><img src="./sources/ig.png" alt="ig"></a>
+                <img src="./sources/maillogo.png" alt="mail" id="maillogo">
+            </div>
+            <div class="container-footer-2">
+                <p>&copy; 2024 My portafolio. All rights reserved.</p>
+                <a href="#top">Back to Top</a>
+            </div>
         </footer>
         <script src="./js/script.js"></script>
     </body>

@@ -4,14 +4,30 @@ const bothSides = ['toLeft', 'toRight'];
 const bothSides_2 = ['toLeft-2', 'toRight-2'];
 const presentation = ['one', 'two', 'three', 'four'];
 const jobsSection = ['CSR', 'DEV'];
+const proyectsSection = ['sub-box', 'sub-box-2', 'sub-box-3', 'sub-box-4'];
+const certificationsSections = ['certification-1', 'certification-2'];
+const leftAndRightAgain = ['toRight-3', 'toLeft-3'];
+const leftAndRightAgain_2 = ['toRight-4', 'toLeft-4'];
 const listedItems = [];
 const sections = [];
 const leftAndRight = [];
-const leftAndRight_2 = []
+const leftAndRight_2 = [];
+const leftAndRight_3 = [];
+const leftAndRight_4 = [];
 const slides = [];
 const jobs = [];
+const proyects = [];
+const certifications = [];
 const slideIndicator = document.getElementById('slideIn');
 const pageIndicatorS = document.getElementById('pageIndicator');
+const proyectIndicator = document.getElementById('proyectIndicator');
+const certificationIndicator = document.getElementById('certificationIndicator');
+const mailCopyClipboard = document.getElementById('maillogo');
+
+mailCopyClipboard.addEventListener('click', function() {
+    navigator.clipboard.writeText('justinearriagam@gmail.com');
+    alert('My email has been copy on your clipboard!');
+});
 
 breadcrumbListedItem.forEach(button => {
     listedItems.push(document.getElementById(button));
@@ -37,6 +53,22 @@ bothSides_2.forEach(side => {
     leftAndRight_2.push(document.getElementById(side));
 });
 
+proyectsSection.forEach(proyect => {
+    proyects.push(document.getElementById(proyect));
+});
+
+leftAndRightAgain.forEach(side => {
+    leftAndRight_3.push(document.getElementById(side));
+})
+
+certificationsSections.forEach(certification => {
+    certifications.push(document.getElementById(certification));
+});
+
+leftAndRightAgain_2.forEach(side => {
+    leftAndRight_4.push(document.getElementById(side));
+});
+
 const defaultSettings = () => {
 
     sections[0].style.display = 'block';
@@ -45,6 +77,12 @@ const defaultSettings = () => {
     jobs[0].style.display = 'grid';
     jobs[1].style.display = 'none'
     pageIndicatorS.innerHTML = `${1} / 2`;
+    proyects[0].style.display = 'grid';
+    proyectIndicator.innerHTML = `${1} / 4`;
+    certifications[0].style.display = 'grid';
+    certifications[1].style.display = 'none';
+    certificationIndicator.innerHTML = `${1} / 2`;
+
 
     for(let i = 1; i < listedItems.length; i++) {
         sections[i].style.display = 'none';
@@ -52,6 +90,10 @@ const defaultSettings = () => {
 
     for(let yz = 1; yz < slides.length; yz++) {
         slides[yz].style.display = 'none';
+    }
+
+    for(let o = 1; 0 < proyects.length; o++) {
+        proyects[o].style.display = 'none';
     }
 };
 
@@ -93,6 +135,28 @@ const currentJobSection = () => {
         }
     });
     return slideRN;
+}
+
+const currentView = () => {
+    let viewingRN;
+
+    proyects.forEach(view => {
+        if(window.getComputedStyle(view).display === 'grid') {
+            viewingRN = view;
+        }
+    });
+
+    return viewingRN;
+}
+
+const currentCertification = () => {
+    let viewingRN;
+    certifications.forEach(certification => {
+        if(window.getComputedStyle(certification).display === 'grid') {
+            viewingRN = certification;
+        }
+    })
+    return viewingRN;
 }
 
 for(let a = 0; a < listedItems.length; a++) {
@@ -166,5 +230,62 @@ for(let e = 0; e < leftAndRight_2.length; e++) {
         }
     });
 }
+
+for(let i = 0; i < leftAndRight_3.length; i++) {
+    leftAndRight_3[i].addEventListener('mouseover', function() {
+        leftAndRight_3[i].style.opacity = '1';
+        leftAndRight_3[i].style.border = '1px solid rgba(0, 0, 0, 1)';
+        leftAndRight_3[i].style.cursor = 'pointer';
+    })
+
+    leftAndRight_3[i].addEventListener('mouseout', function() {
+        leftAndRight_3[i].style.opacity = '0.1';
+        leftAndRight_3[i].style.border = '1px solid rgba(0, 0, 0, 0.1)';
+    })
+
+    leftAndRight_3[i].addEventListener('click', function() {
+        let viewingRn = currentView();
+        let indexHolder = proyects.indexOf(viewingRn);
+
+        if(i === 0 && indexHolder < 3) {
+            proyects[indexHolder + 1].style.display = 'grid'
+            viewingRn.style.display = 'none';
+            proyectIndicator.innerHTML = `${(indexHolder + 1) + 1} / 4`;
+        } else if(i === 1 && indexHolder > 0) {
+            proyects[indexHolder - 1].style.display = 'grid'
+            viewingRn.style.display = 'none';
+            proyectIndicator.innerHTML = `${(indexHolder + 1) - 1} / 4`;
+        }
+    })
+}
+
+for(let o = 0; o < leftAndRight_4.length; o++) {
+    leftAndRight_4[o].addEventListener('mouseover', function() {
+        leftAndRight_4[o].style.opacity = '1';
+        leftAndRight_4[o].style.border = '1px solid rgba(0, 0, 0, 1)';
+        leftAndRight_4[o].style.cursor = 'pointer';
+    });
+
+    leftAndRight_4[o].addEventListener('mouseout', function() {
+        leftAndRight_4[o].style.opacity = '0.1';
+        leftAndRight_4[o].style.border = '1px solid rgba(0, 0, 0, 0.1)';
+    });
+
+    leftAndRight_4[o].addEventListener('click', function() {
+        let viewingRN = currentCertification();
+        let indexHolder = certifications.indexOf(viewingRN);
+
+        if(o === 0 && indexHolder < 2) {
+            certifications[indexHolder + 1].style.display = 'grid'
+            viewingRN.style.display = 'none';
+            certificationIndicator.innerHTML = `${(indexHolder + 1) + 1} / 2`;
+        } else if(o === 1 && indexHolder > 0) {
+            certifications[indexHolder - 1].style.display = 'grid'
+            viewingRN.style.display = 'none';
+            certificationIndicator.innerHTML = `${(indexHolder + 1) - 1} / 2`;
+        }
+    });
+}
+
 
 document.body.onload = defaultSettings;
