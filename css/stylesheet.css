@@ -13,7 +13,7 @@ body {
 
 header {
     height: 100px;
-    width: auto;
+    width: 100%;
     backdrop-filter: blur(25px);
     border-radius: 100px;
     border: 2px solid white;
@@ -51,15 +51,11 @@ p, li, span, a {
     color: gray;
     text-decoration: none;
     transition: ease-out .2s;
+    font-size: 18px;
 }
 
 .breadcrumb a:active {
     color: white;
-}
-
-.breadcrumb a:hover {
-    font-size: 20px;
-    transition: ease-out .2s;
 }
 
 nav {
@@ -95,7 +91,7 @@ nav p {
 
 nav img {
     grid-column: 7 / span 4;
-    grid-row: 1 / span 2 ;
+    grid-row: 1 / span 2;
     height: auto;
     margin-left: 0px;
     padding-left: 0px;
@@ -103,7 +99,7 @@ nav img {
 
 main {
     display: grid;
-    width: auto;
+    width: 100%;
     height: 1300px;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(20, 1fr);
@@ -1103,5 +1099,182 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+    header  {
+        backdrop-filter: blur(25px);
+        border-radius: 100px;
+        border: 2px solid white;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    header, main, nav, footer {
+        width: 610px;
+    }
+
+    .breadcrumb {
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .breadcrumb a{
+        font-size: 16px;
+    }
+
+    .top img {
+        width: 275px;
+        height: 350px;
+        grid-row: 2 / span 3;
+    }
+
+    .top h1 {
+        grid-row: 1 / span 2;
+        grid-column: 2 / span 7;
+        
+    }
+
+    .top p {
+        grid-row: 3 / span 2;
+        grid-column: 2 / span 4;
+    }
+
+    .description, .skills, .JobExpSec, .education, .box {
+        height: 1000px;
+        grid-row: 3 / span 18;
+    }
+
+    .sub-container1, .skilly, .container, .sub-container-2 {
+        height: 980px;
+    }
+
+    .sub-container1 h2 {
+        grid-row: 1;
+        grid-column: 6 / span 10;
+    }
+
+    .paragraph-1 {
+        grid-row: 3 / span 10;
+        grid-column: 2 / span 13;
+    }
+
+    .paragraph-2 {
+        grid-row: 13 / span 8;
+        grid-column: 2 / span 13;
+    }
+
+    .front-end h3 {
+        grid-column: 3 / span 8;
+    }
+
+    .front-end img {
+        height: 175px;
+        width: 320px;
+        grid-column: 2 / span 8;
+        grid-row: 5 / span 3;
+    }
+
+    .skilly {
+        width: 100%;
+    }
+
+    .arrowRight, .arrowLeft {
+        margin: 0px;
+        width: 50px;
+        height: 75px;
+    }
+
+    .back-end, .other, .languages, .sub-container-2, .college, .extracurricular, .sub-box {
+        height: 100%;
+    }
+
+    .back-end h3 {
+        grid-column: 3 / span 6;
+    }
+
+    #mysql {
+        grid-column: 3 / span 6;
+        grid-row: 3 / span 3;
+    }
+
+    #java {
+        grid-column: 4 / span 6;
+        grid-row: 7 / span 3;
+        align-self: normal;
+        justify-self: normal;
+    }
     
+    .container h2 {
+        grid-column: 4 / span 4;
+    }
+
+    #CSR, #DEV {
+        height: 100%;
+    }
+
+    .tmobile {
+        height: 75px;
+        width: 75px;
+    }
+
+    .humana {
+        height: 65px;
+        width: 175px;
+        grid-column: 3 / span 4;
+        grid-row: 8 / span 2;
+    }
+
+    .info-1 {
+        grid-column: 2 /span 10;
+        grid-row: 3;
+    }
+
+    .info-2 {
+        grid-column: 2 / span 10;
+        grid-row: 7;
+    }
+
+    .college {
+        grid-column: 1 / span 9;
+        grid-row: 2 / span 18;
+    }
+
+    .extracurricular {
+        grid-row: 2 / span 18;
+        grid-column: 12 / span 9;
+    }
+
+    .extracurricular h3 {
+        grid-column: 7 / span 3;
+    }
+
+    #sub-box, #sub-box-2, #sub-box-3, #sub-box-4  {
+        width: 100%;
+        height: 700px;
+    }
+
+    #sub-box h3, #sub-box-2 h3, #sub-box-3 h3, #sub-box-4 h3 {
+        margin-left: 10px;
+    }
+
+    #sub-box img, #sub-box-2 img, #sub-box-3 img, #sub-box-4 img {
+        height: 280px;
+        width: 385px;
+        grid-row: 7 / span 20;
+        margin-left: 5px;
+    }
+
+    #sub-box-3 h3 {
+        grid-column: 1 / span 8;
+        grid-row: 1;
+        margin-left: -15px;
+    }
+
+    #sub-box-4 h3 {
+        grid-column: 1 / span 8;
+        grid-row: 1;
+        margin-left: -55px;
+    }
 }
+
+

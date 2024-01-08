@@ -95,6 +95,7 @@ const defaultSettings = () => {
     for(let o = 1; 0 < proyects.length; o++) {
         proyects[o].style.display = 'none';
     }
+
 };
 
 const currentShowing = () => {
@@ -114,6 +115,7 @@ const listedItemActive = () => {
             activeRN = item;
         }
     })
+
     return activeRN;
 }
 
@@ -160,19 +162,52 @@ const currentCertification = () => {
 }
 
 for(let a = 0; a < listedItems.length; a++) {
-    listedItems[a].addEventListener('click', function() {
-        let displayingRN = currentShowing();
-        let itemTurned = listedItemActive();
-        let index = sections.indexOf(displayingRN);
-         if(index === a) {
-            alert('you are viewing the current section...');
-        } else {
-            sections[a].style.display = 'block';
-            displayingRN.style.display = 'none';
-            listedItems[a].style.color = 'white';
-            itemTurned.style.color = 'rgb(128, 128, 128)';
-        }
-    });
+    if(window.screen.width <= 480) {
+        listedItems[a].addEventListener('click', function() {
+            let displayingRN = currentShowing();
+            let itemTurned = listedItemActive();
+            let index = sections.indexOf(displayingRN);
+    
+    
+             if(index === a) {
+                alert('you are viewing the current section...');
+            } else {
+                sections[a].style.display = 'block';
+                displayingRN.style.display = 'none';
+                listedItems[a].style.color = 'white';
+                itemTurned.style.color = 'rgb(128, 128, 128)';
+                listedItems[a].style.fontSize = '17px';
+                itemTurned.style.fontSize = '16px';
+            }
+        });
+    } else {
+        listedItems[a].addEventListener('mouseover', function() {
+            listedItems[a].style.fontSize = '20px';
+            listedItems[a].style.transition = 'ease-out 0.2s';
+        });
+    
+        listedItems[a].addEventListener('mouseout', function() {
+            listedItems[a].style.fontSize = '18px';
+            listedItems[a].style.transition = 'ease-in 0.2s';
+        })
+    
+    
+        listedItems[a].addEventListener('click', function() {
+            let displayingRN = currentShowing();
+            let itemTurned = listedItemActive();
+            let index = sections.indexOf(displayingRN);
+    
+    
+             if(index === a) {
+                alert('you are viewing the current section...');
+            } else {
+                sections[a].style.display = 'block';
+                displayingRN.style.display = 'none';
+                listedItems[a].style.color = 'white';
+                itemTurned.style.color = 'rgb(128, 128, 128)';
+            }
+        });
+    }
 }
 
 for(let u = 0; u < leftAndRight.length; u++) {
